@@ -1,0 +1,14 @@
+class ContainsDuplicateClass {
+    public boolean containsDuplicate(int[] nums) {
+        Set<Object> valueSet = new HashSet<>();
+        Map<Integer, Integer> mapp = IntStream.range(0, nums.length)
+                .boxed()
+                .collect(Collectors.toMap(i -> i, i -> nums[i]));
+        for (Object value : mapp.values()) {
+            if (!valueSet.add(value)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
