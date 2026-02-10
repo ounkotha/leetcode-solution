@@ -13,5 +13,12 @@ public class RemoveElement {
         }
 
         return count;
+
+        //todo: another solution
+//        int[] filteredNums = Arrays.stream(nums)
+//                .filter(num -> num != val)
+//                .toArray();
+//        System.arraycopy(filteredNums, 0, nums, 0, filteredNums.length);
+//        return filteredNums.length;
     }
 }

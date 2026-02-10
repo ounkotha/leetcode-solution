@@ -15,6 +15,13 @@ public class RemoveDuplicatesFromSortedArray {
 
         return count;
 
+        //todo: another solution
+//        int[] filteredNums = Arrays.stream(nums)
+//                .distinct()
+//                .toArray();
+//        System.arraycopy(filteredNums, 0, nums, 0, filteredNums.length);
+//        return filteredNums.length;
+
 
     }
 }
